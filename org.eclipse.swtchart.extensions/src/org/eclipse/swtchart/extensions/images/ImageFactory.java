@@ -11,6 +11,8 @@
  *******************************************************************************/
 package org.eclipse.swtchart.extensions.images;
 
+import java.lang.reflect.InvocationTargetException;
+
 import org.eclipse.swt.graphics.ImageData;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swtchart.extensions.core.ScrollableChart;
@@ -29,10 +31,14 @@ public class ImageFactory<T extends ScrollableChart> {
 	 * @return Shell
 	 * @throws IllegalAccessException
 	 * @throws InstantiationException
+	 * @throws SecurityException 
+	 * @throws NoSuchMethodException 
+	 * @throws InvocationTargetException 
+	 * @throws IllegalArgumentException 
 	 */
-	public ImageFactory(Class<T> clazz, int width, int height) throws InstantiationException, IllegalAccessException {
+	public ImageFactory(Class<T> clazz, int width, int height) throws InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException {
 		//
-		t = clazz.newInstance();
+		t = clazz.getDeclaredConstructor().newInstance();
 		imageSupplier = new ImageSupplier();
 		//
 		Display display = ((ScrollableChart)t).getBaseChart().getDisplay();

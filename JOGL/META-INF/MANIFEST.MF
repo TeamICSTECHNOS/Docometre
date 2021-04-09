@@ -3,7 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: JOGL
 Bundle-SymbolicName: JOGL; singleton:=true
 Bundle-Version: 1.0.0.qualifier
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-RequiredExecutionEnvironment: JavaSE-11
 Comment: Eclipse-BundleShape: dir
 Export-Package: com.jogamp.common,
  com.jogamp.common.jvm,

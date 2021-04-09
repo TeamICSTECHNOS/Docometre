@@ -4,7 +4,7 @@ Bundle-Name: JZY3D
 Bundle-SymbolicName: JZY3D;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Automatic-Module-Name: JZY3D
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-RequiredExecutionEnvironment: JavaSE-11
 Bundle-Vendor: JZY3D
 Bundle-ClassPath: libs/jogamp-fat.jar,
  libs/jzy3d-api-1.0.2-maths-io.jar,
